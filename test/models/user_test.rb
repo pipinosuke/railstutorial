@@ -64,7 +64,11 @@ test "password should be present (nonblank)" do
     assert_not @user.authenticated?(:remember, '')
   end
 
-
-
-
+  test "associated microposts shold be destroyed" do
+    @user.save
+    @user.microposts.create!(content:"アイウエオ")
+    assert_difference 'Micropost.count',-1 do
+      @user.destroy
+    end
+  end
 end
