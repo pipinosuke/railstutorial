@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 
 Hi <%= @user.name %>,
 
 Welcome to the Sample App! Click on the link below to activate your account:
+=======
+UserMailer#account_activation
+
+<%= @greeting %>, find me in app/views/user_mailer/account_activation.text.erb
+>>>>>>> a10bfc58d22038db71883d0c55841ed599741361
 
 <%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
