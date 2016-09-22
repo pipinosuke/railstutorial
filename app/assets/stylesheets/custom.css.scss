@@ -1,14 +1,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+<<<<<<< HEAD
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+=======
+>>>>>>> 6536699c0418a59c1db47b3ef648b4e6c2e5b91c
 
 /* universal */
 
 body {
   padding-top: 60px;
+<<<<<<< HEAD
+=======
+  color: purple;
+>>>>>>> 6536699c0418a59c1db47b3ef648b4e6c2e5b91c
 }
 
 section {
@@ -26,6 +33,11 @@ textarea {
   }
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6536699c0418a59c1db47b3ef648b4e6c2e5b91c
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,7 +57,11 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
+<<<<<<< HEAD
   color: $gray-light;
+=======
+  color: #777;
+>>>>>>> 6536699c0418a59c1db47b3ef648b4e6c2e5b91c
 }
 
 p {
@@ -53,35 +69,60 @@ p {
   line-height: 1.7em;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6536699c0418a59c1db47b3ef648b4e6c2e5b91c
 /* header */
 
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
+<<<<<<< HEAD
   color: white;
+=======
+  color: gold;
+>>>>>>> 6536699c0418a59c1db47b3ef648b4e6c2e5b91c
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
+<<<<<<< HEAD
     color: white;
+=======
+    color: black;
+>>>>>>> 6536699c0418a59c1db47b3ef648b4e6c2e5b91c
     text-decoration: none;
   }
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6536699c0418a59c1db47b3ef648b4e6c2e5b91c
 /* footer */
 
 footer {
   margin-top: 45px;
   padding-top: 5px;
+<<<<<<< HEAD
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
     color: $gray;
     &:hover {
       color: $gray-darker;
+=======
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  a {
+    color: red;
+    &:hover {
+      color: #222;
+>>>>>>> 6536699c0418a59c1db47b3ef648b4e6c2e5b91c
     }
   }
   small {
@@ -95,4 +136,9 @@ footer {
       margin-left: 15px;
     }
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6536699c0418a59c1db47b3ef648b4e6c2e5b91c
 }

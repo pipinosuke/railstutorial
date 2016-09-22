@@ -6,6 +6,7 @@
                                            'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+<<<<<<< HEAD
 
     <%= render 'layouts/shim' %>
   </head>
@@ -17,5 +18,16 @@
     </div>
 
     <%= render 'layouts/footer' %>
+=======
+ <%= render 'layouts/shim' %>
+  </head>
+  <body>
+
+    <%= render 'layouts/header' %>
+    <div class="container">
+    <%= yield %>
+    </div>
+    <%= render 'layouts/fooder'%>
+>>>>>>> 6536699c0418a59c1db47b3ef648b4e6c2e5b91c
   </body>
 </html>
