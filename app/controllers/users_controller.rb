@@ -19,9 +19,9 @@ before_action :admin_user,     only: :destroy
   def create
     @user=User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success]="汚い花火だ"
-      redirect_to @user
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = "アクティベートしてください"
+      redirect_to root_url
 
 
 
@@ -75,6 +75,7 @@ before_action :admin_user,     only: :destroy
   def admin_user
   redirect_to(root_url) unless current_user.admin?
   end
+
 
 
 end
