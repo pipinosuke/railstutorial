@@ -1,7 +1,18 @@
 class User < ActiveRecord::Base
+<<<<<<< HEAD
   attr_accessor :remember_token, :activation_token, :reset_token
+=======
+<<<<<<< HEAD
+  attr_accessor :remember_token, :activation_token
+>>>>>>> cd9206e7cc137fe7a5b3d118af71babe22eb7405
   before_save :downcase_email
   before_create :create_activation_digest
+=======
+
+before_create :create_activation_digest
+  attr_accessor :remember_token, :activation_token
+  before_save   :downcase_email
+>>>>>>> a10bfc58d22038db71883d0c55841ed599741361
   validates :name,  presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: { maximum: 255 },
@@ -72,6 +83,20 @@ end
     self.activation_digest = User.digest(activation_token)
 
   end
+
+
+private
+
+# メールアドレスをすべて小文字にする
+def downcase_email
+  self.email = email.downcase
+end
+
+# 有効化トークンとダイジェストを作成および代入する
+def create_activation_digest
+  self.activation_token  = User.new_token
+  self.activation_digest = User.digest(activation_token)
+end
 
 
 end
