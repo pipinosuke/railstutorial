@@ -10,7 +10,9 @@ class User < ActiveRecord::Base
 has_secure_password
 validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
-
+def password_reset_expired?
+   reset_sent_at < 2.hours.ago
+end
 # アカウントを有効にする
 def activate
   update_attribute(:activated,    true)
