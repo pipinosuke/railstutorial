@@ -11,6 +11,10 @@ class User < ActiveRecord::Base
 has_secure_password
 validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
+def feed
+  Micropost.where("user_id = ?", id)
+end
+
 def password_reset_expired?
    reset_sent_at < 2.hours.ago
 end
